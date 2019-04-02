@@ -1,0 +1,6 @@
+framework module Pods_MetricaTest {
+  umbrella header "Pods-MetricaTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06616DA6534329C3FAFD1187 /* Pods_MetricaTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB7D008A190EFAB92BB204 /* Pods_MetricaTestTests.framework */; };
+		72D8CBEF97349069B75AA403 /* Pods_MetricaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9359A8054BFB82FE2307D6C /* Pods_MetricaTestUITests.framework */; };
+		DFD5DAD219A8C8C257662660 /* Pods_MetricaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3E916F4C795D65AC362D78 /* Pods_MetricaTest.framework */; };
+		F957F4272250C4B200FB5520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4262250C4B200FB5520 /* AppDelegate.swift */; };
+		F957F4292250C4B200FB5520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4282250C4B200FB5520 /* ViewController.swift */; };
+		F957F42C2250C4B200FB5520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F957F42A2250C4B200FB5520 /* Main.storyboard */; };
+		F957F42E2250C4B500FB5520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F957F42D2250C4B500FB5520 /* Assets.xcassets */; };
+		F957F4312250C4B500FB5520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F957F42F2250C4B500FB5520 /* LaunchScreen.storyboard */; };
+		F957F43C2250C4B500FB5520 /* MetricaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F43B2250C4B500FB5520 /* MetricaTestTests.swift */; };
+		F957F4472250C4B500FB5520 /* MetricaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4462250C4B500FB5520 /* MetricaTestUITests.swift */; };
+		F957F4552250C4CC00FB5520 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4542250C4CC00FB5520 /* Constants.swift */; };
+		F957F4572253371400FB5520 /* DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4562253371400FB5520 /* DeepLinks.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F957F4382250C4B500FB5520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F957F41B2250C4B100FB5520 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F957F4222250C4B200FB5520;
+			remoteInfo = MetricaTest;
+		};
+		F957F4432250C4B500FB5520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F957F41B2250C4B100FB5520 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F957F4222250C4B200FB5520;
+			remoteInfo = MetricaTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02D861EF0B0006883373BE71 /* Pods-MetricaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTest.release.xcconfig"; path = "Target Support Files/Pods-MetricaTest/Pods-MetricaTest.release.xcconfig"; sourceTree = "<group>"; };
+		2BA2DC7DBC98826A2BF00E3A /* Pods-MetricaTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-MetricaTestUITests/Pods-MetricaTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		806193D39DEBF131B5EDB99B /* Pods-MetricaTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTestTests.release.xcconfig"; path = "Target Support Files/Pods-MetricaTestTests/Pods-MetricaTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C3E916F4C795D65AC362D78 /* Pods_MetricaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetricaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7EB7D008A190EFAB92BB204 /* Pods_MetricaTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetricaTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01FC103A9FBC64485F46B2E /* Pods-MetricaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTest.debug.xcconfig"; path = "Target Support Files/Pods-MetricaTest/Pods-MetricaTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B9359A8054BFB82FE2307D6C /* Pods_MetricaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetricaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED26ED12BD24A6C01A84D6FA /* Pods-MetricaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MetricaTestTests/Pods-MetricaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0373EAF395A554756235B39 /* Pods-MetricaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTestUITests.release.xcconfig"; path = "Target Support Files/Pods-MetricaTestUITests/Pods-MetricaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F957F4232250C4B200FB5520 /* MetricaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetricaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F957F4262250C4B200FB5520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F957F4282250C4B200FB5520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F957F42B2250C4B200FB5520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F957F42D2250C4B500FB5520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F957F4302250C4B500FB5520 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F957F4322250C4B500FB5520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F957F4372250C4B500FB5520 /* MetricaTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetricaTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F957F43B2250C4B500FB5520 /* MetricaTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricaTestTests.swift; sourceTree = "<group>"; };
+		F957F43D2250C4B500FB5520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F957F4422250C4B500FB5520 /* MetricaTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetricaTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F957F4462250C4B500FB5520 /* MetricaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricaTestUITests.swift; sourceTree = "<group>"; };
+		F957F4482250C4B500FB5520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F957F4542250C4CC00FB5520 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F957F4562253371400FB5520 /* DeepLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinks.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F957F4202250C4B200FB5520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD5DAD219A8C8C257662660 /* Pods_MetricaTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F957F4342250C4B500FB5520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06616DA6534329C3FAFD1187 /* Pods_MetricaTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F957F43F2250C4B500FB5520 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72D8CBEF97349069B75AA403 /* Pods_MetricaTestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D597F965302F8F78ED527DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B01FC103A9FBC64485F46B2E /* Pods-MetricaTest.debug.xcconfig */,
+				02D861EF0B0006883373BE71 /* Pods-MetricaTest.release.xcconfig */,
+				ED26ED12BD24A6C01A84D6FA /* Pods-MetricaTestTests.debug.xcconfig */,
+				806193D39DEBF131B5EDB99B /* Pods-MetricaTestTests.release.xcconfig */,
+				2BA2DC7DBC98826A2BF00E3A /* Pods-MetricaTestUITests.debug.xcconfig */,
+				F0373EAF395A554756235B39 /* Pods-MetricaTestUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA524CEB708F8BC565E8C5A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C3E916F4C795D65AC362D78 /* Pods_MetricaTest.framework */,
+				A7EB7D008A190EFAB92BB204 /* Pods_MetricaTestTests.framework */,
+				B9359A8054BFB82FE2307D6C /* Pods_MetricaTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F957F41A2250C4B100FB5520 = {
+			isa = PBXGroup;
+			children = (
+				F957F4252250C4B200FB5520 /* MetricaTest */,
+				F957F43A2250C4B500FB5520 /* MetricaTestTests */,
+				F957F4452250C4B500FB5520 /* MetricaTestUITests */,
+				F957F4242250C4B200FB5520 /* Products */,
+				5D597F965302F8F78ED527DC /* Pods */,
+				DA524CEB708F8BC565E8C5A1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F957F4242250C4B200FB5520 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F957F4232250C4B200FB5520 /* MetricaTest.app */,
+				F957F4372250C4B500FB5520 /* MetricaTestTests.xctest */,
+				F957F4422250C4B500FB5520 /* MetricaTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F957F4252250C4B200FB5520 /* MetricaTest */ = {
+			isa = PBXGroup;
+			children = (
+				F957F4262250C4B200FB5520 /* AppDelegate.swift */,
+				F957F4282250C4B200FB5520 /* ViewController.swift */,
+				F957F42A2250C4B200FB5520 /* Main.storyboard */,
+				F957F4542250C4CC00FB5520 /* Constants.swift */,
+				F957F4562253371400FB5520 /* DeepLinks.swift */,
+				F957F42D2250C4B500FB5520 /* Assets.xcassets */,
+				F957F42F2250C4B500FB5520 /* LaunchScreen.storyboard */,
+				F957F4322250C4B500FB5520 /* Info.plist */,
+			);
+			path = MetricaTest;
+			sourceTree = "<group>";
+		};
+		F957F43A2250C4B500FB5520 /* MetricaTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				F957F43B2250C4B500FB5520 /* MetricaTestTests.swift */,
+				F957F43D2250C4B500FB5520 /* Info.plist */,
+			);
+			path = MetricaTestTests;
+			sourceTree = "<group>";
+		};
+		F957F4452250C4B500FB5520 /* MetricaTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F957F4462250C4B500FB5520 /* MetricaTestUITests.swift */,
+				F957F4482250C4B500FB5520 /* Info.plist */,
+			);
+			path = MetricaTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F957F4222250C4B200FB5520 /* MetricaTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F957F44B2250C4B500FB5520 /* Build configuration list for PBXNativeTarget "MetricaTest" */;
+			buildPhases = (
+				CB98AFF9031A7AFF38E1FA93 /* [CP] Check Pods Manifest.lock */,
+				F957F41F2250C4B200FB5520 /* Sources */,
+				F957F4202250C4B200FB5520 /* Frameworks */,
+				F957F4212250C4B200FB5520 /* Resources */,
+				A65ECDA82E9747133AF5C2BF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetricaTest;
+			productName = MetricaTest;
+			productReference = F957F4232250C4B200FB5520 /* MetricaTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F957F4362250C4B500FB5520 /* MetricaTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F957F44E2250C4B500FB5520 /* Build configuration list for PBXNativeTarget "MetricaTestTests" */;
+			buildPhases = (
+				2C33DBE7894377ACB22D32A7 /* [CP] Check Pods Manifest.lock */,
+				F957F4332250C4B500FB5520 /* Sources */,
+				F957F4342250C4B500FB5520 /* Frameworks */,
+				F957F4352250C4B500FB5520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F957F4392250C4B500FB5520 /* PBXTargetDependency */,
+			);
+			name = MetricaTestTests;
+			productName = MetricaTestTests;
+			productReference = F957F4372250C4B500FB5520 /* MetricaTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F957F4412250C4B500FB5520 /* MetricaTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F957F4512250C4B500FB5520 /* Build configuration list for PBXNativeTarget "MetricaTestUITests" */;
+			buildPhases = (
+				609A16A977605D9C2EF01F01 /* [CP] Check Pods Manifest.lock */,
+				F957F43E2250C4B500FB5520 /* Sources */,
+				F957F43F2250C4B500FB5520 /* Frameworks */,
+				F957F4402250C4B500FB5520 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F957F4442250C4B500FB5520 /* PBXTargetDependency */,
+			);
+			name = MetricaTestUITests;
+			productName = MetricaTestUITests;
+			productReference = F957F4422250C4B500FB5520 /* MetricaTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F957F41B2250C4B100FB5520 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Vitaliy Kozlov";
+				TargetAttributes = {
+					F957F4222250C4B200FB5520 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F957F4362250C4B500FB5520 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F957F4222250C4B200FB5520;
+					};
+					F957F4412250C4B500FB5520 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F957F4222250C4B200FB5520;
+					};
+				};
+			};
+			buildConfigurationList = F957F41E2250C4B100FB5520 /* Build configuration list for PBXProject "MetricaTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F957F41A2250C4B100FB5520;
+			productRefGroup = F957F4242250C4B200FB5520 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F957F4222250C4B200FB5520 /* MetricaTest */,
+				F957F4362250C4B500FB5520 /* MetricaTestTests */,
+				F957F4412250C4B500FB5520 /* MetricaTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F957F4212250C4B200FB5520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F957F4312250C4B500FB5520 /* LaunchScreen.storyboard in Resources */,
+				F957F42E2250C4B500FB5520 /* Assets.xcassets in Resources */,
+				F957F42C2250C4B200FB5520 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F957F4352250C4B500FB5520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F957F4402250C4B500FB5520 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C33DBE7894377ACB22D32A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetricaTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		609A16A977605D9C2EF01F01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetricaTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A65ECDA82E9747133AF5C2BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MetricaTest/Pods-MetricaTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
+				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetricaCrashes.framework",
+				"${PODS_ROOT}/YandexMobileMetricaPush/dynamic/YandexMobileMetricaPush.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetricaCrashes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetricaPush.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MetricaTest/Pods-MetricaTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB98AFF9031A7AFF38E1FA93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MetricaTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F957F41F2250C4B200FB5520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F957F4292250C4B200FB5520 /* ViewController.swift in Sources */,
+				F957F4572253371400FB5520 /* DeepLinks.swift in Sources */,
+				F957F4272250C4B200FB5520 /* AppDelegate.swift in Sources */,
+				F957F4552250C4CC00FB5520 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F957F4332250C4B500FB5520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F957F43C2250C4B500FB5520 /* MetricaTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F957F43E2250C4B500FB5520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F957F4472250C4B500FB5520 /* MetricaTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F957F4392250C4B500FB5520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F957F4222250C4B200FB5520 /* MetricaTest */;
+			targetProxy = F957F4382250C4B500FB5520 /* PBXContainerItemProxy */;
+		};
+		F957F4442250C4B500FB5520 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F957F4222250C4B200FB5520 /* MetricaTest */;
+			targetProxy = F957F4432250C4B500FB5520 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F957F42A2250C4B200FB5520 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F957F42B2250C4B200FB5520 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F957F42F2250C4B500FB5520 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F957F4302250C4B500FB5520 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F957F4492250C4B500FB5520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F957F44A2250C4B500FB5520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F957F44C2250C4B500FB5520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B01FC103A9FBC64485F46B2E /* Pods-MetricaTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49NA434SZ7;
+				INFOPLIST_FILE = MetricaTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vitCorp.MetricaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F957F44D2250C4B500FB5520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02D861EF0B0006883373BE71 /* Pods-MetricaTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49NA434SZ7;
+				INFOPLIST_FILE = MetricaTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vitCorp.MetricaTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F957F44F2250C4B500FB5520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED26ED12BD24A6C01A84D6FA /* Pods-MetricaTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49NA434SZ7;
+				INFOPLIST_FILE = MetricaTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vitCorp.MetricaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetricaTest.app/MetricaTest";
+			};
+			name = Debug;
+		};
+		F957F4502250C4B500FB5520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 806193D39DEBF131B5EDB99B /* Pods-MetricaTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49NA434SZ7;
+				INFOPLIST_FILE = MetricaTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vitCorp.MetricaTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetricaTest.app/MetricaTest";
+			};
+			name = Release;
+		};
+		F957F4522250C4B500FB5520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA2DC7DBC98826A2BF00E3A /* Pods-MetricaTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49NA434SZ7;
+				INFOPLIST_FILE = MetricaTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vitCorp.MetricaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetricaTest;
+			};
+			name = Debug;
+		};
+		F957F4532250C4B500FB5520 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0373EAF395A554756235B39 /* Pods-MetricaTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49NA434SZ7;
+				INFOPLIST_FILE = MetricaTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vitCorp.MetricaTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MetricaTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F957F41E2250C4B100FB5520 /* Build configuration list for PBXProject "MetricaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F957F4492250C4B500FB5520 /* Debug */,
+				F957F44A2250C4B500FB5520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F957F44B2250C4B500FB5520 /* Build configuration list for PBXNativeTarget "MetricaTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F957F44C2250C4B500FB5520 /* Debug */,
+				F957F44D2250C4B500FB5520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F957F44E2250C4B500FB5520 /* Build configuration list for PBXNativeTarget "MetricaTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F957F44F2250C4B500FB5520 /* Debug */,
+				F957F4502250C4B500FB5520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F957F4512250C4B500FB5520 /* Build configuration list for PBXNativeTarget "MetricaTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F957F4522250C4B500FB5520 /* Debug */,
+				F957F4532250C4B500FB5520 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F957F41B2250C4B100FB5520 /* Project object */;
+}

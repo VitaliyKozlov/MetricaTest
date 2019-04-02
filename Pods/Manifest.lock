@@ -1,0 +1,48 @@
+PODS:
+  - AppsFlyerFramework (4.8.12)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.5.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit (~> 4.37)
+  - FBSDKCoreKit (4.40.0):
+    - Bolts (~> 1.9)
+  - YandexMobileMetrica/Dynamic (3.6.0):
+    - YandexMobileMetrica/Dynamic/Core (= 3.6.0)
+    - YandexMobileMetrica/Dynamic/Crashes (= 3.6.0)
+  - YandexMobileMetrica/Dynamic/Core (3.6.0)
+  - YandexMobileMetrica/Dynamic/Crashes (3.6.0):
+    - YandexMobileMetrica/Dynamic/Core
+  - YandexMobileMetricaPush/Dynamic (0.7.2):
+    - YandexMobileMetrica/Dynamic/Core (~> 3.4)
+
+DEPENDENCIES:
+  - AppsFlyerFramework
+  - FacebookCore
+  - YandexMobileMetrica/Dynamic (= 3.6.0)
+  - YandexMobileMetricaPush/Dynamic (= 0.7.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AppsFlyerFramework
+    - Bolts
+    - FacebookCore
+    - FBSDKCoreKit
+    - YandexMobileMetrica
+    - YandexMobileMetricaPush
+
+SPEC CHECKSUMS:
+  AppsFlyerFramework: 726f063384d8dc763d7b423e48cbc8cbe10989ab
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 74288d0add931d361b1596beae787ab72c438249
+  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
+  YandexMobileMetrica: 11eee6732831a44aea2d81e3ae8626b5b0e129c5
+  YandexMobileMetricaPush: 88e192d6484c4c66b1904325b32a915923acd312
+
+PODFILE CHECKSUM: ccd4686756e51457771d7bef83507d24ec9a929f
+
+COCOAPODS: 1.6.1
