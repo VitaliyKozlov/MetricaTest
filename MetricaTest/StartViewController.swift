@@ -74,66 +74,102 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         var appFlyerString = ""
         if appsFlyerData["campaign_id"] != nil {
             let ad_campaign_id = "\(appsFlyerData["campaign_id"] ?? "")"
-            if ad_campaign_id != "None"{
             appFlyerString = appFlyerString + "&ad_campaign_id=\(ad_campaign_id)"
-            }
-        }
-        if appsFlyerData["af_c_id"] != nil {
-            let ad_campaign_id = "\(appsFlyerData["af_c_id"] ?? "")"
-             if ad_campaign_id != "None"{
-            appFlyerString = appFlyerString + "&ad_campaign_id=\(ad_campaign_id)"
-            }
         }
         if appsFlyerData["adgroup_id"] != nil {
             let creative_id = "\(appsFlyerData["adgroup_id"] ?? "")"
-             if creative_id != "None"{
             appFlyerString = appFlyerString + "&creative_id=\(creative_id)"
-            }
-        }
-        if appsFlyerData["af_ad_id"] != nil{
-            let creative_id = "\(appsFlyerData["af_ad_id"] ?? "")"
-            if creative_id != "None"{
-            appFlyerString = appFlyerString + "&creative_id=\(creative_id)"
-            }
         }
         if appsFlyerData["adgroup_id"] != nil {
             let sub_id_3 = "\(appsFlyerData["adgroup_id"] ?? "")"
-            if sub_id_3 != "None"{
             appFlyerString = appFlyerString + "&sub_id_3=\(sub_id_3)"
+        }
+        if appsFlyerData["media_source"] != nil {
+            let sub_id_6 = "\(appsFlyerData["media_source"] ?? "")"
+            appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
+        }
+        if appsFlyerData["af_c_id"] != nil {
+            let ad_campaign_id = "\(appsFlyerData["af_c_id"] ?? "")"
+            appFlyerString = appFlyerString + "&ad_campaign_id=\(ad_campaign_id)"
+        }
+        if appsFlyerData["af_ad_id"] != nil{
+            let creative_id = "\(appsFlyerData["af_ad_id"] ?? "")"
+            appFlyerString = appFlyerString + "&creative_id=\(creative_id)"
+        }
+        if appsFlyerData["af_ad_id"] != nil{
+            let sub_id_3 = "\(appsFlyerData["af_ad_id"] ?? "")"
+            appFlyerString = appFlyerString + "&sub_id_3=\(sub_id_3)"
+        }
+        if appsFlyerData["campaign"] != nil {
+            let sub_id_4 = "\(appsFlyerData["campaign"] ?? "")"
+            if sub_id_4 != "None" {
+            appFlyerString = appFlyerString + "&sub_id_4=\(sub_id_4)"
             }
+        }
+        if appsFlyerData["c"] != nil {
+            let sub_id_4 = "\(appsFlyerData["c"] ?? "")"
+            if sub_id_4 != "None" {
+            appFlyerString = appFlyerString + "&sub_id_4=\(sub_id_4)"
+            }
+        }
+        if appsFlyerData["af_prt"] != nil {
+            let sub_id_5 = "\(appsFlyerData["af_prt"] ?? "")"
+            appFlyerString = appFlyerString + "&sub_id_5=\(sub_id_5)"
         }
         
         if appsFlyerData["pid"] != nil {
             let sub_id_6 = "\(appsFlyerData["pid"] ?? "")"
-            if sub_id_6 != "None"{
             appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
-            }
         }
-        if appsFlyerData["media_source"] != nil {
-            let sub_id_6 = "\(appsFlyerData["media_source"] ?? "")"
-            if sub_id_6 != "None"{
-                appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
-            }
+        if appsFlyerData["af_sub1"] != nil {
+            let sub_id_11 = "\(appsFlyerData["af_sub1"] ?? "")"
+            appFlyerString = appFlyerString + "&sub_id_11=\(sub_id_11)"
         }
-        if appsFlyerData["organic"] != nil {
-            let sub_id_6 = "\(appsFlyerData["organic"] ?? "")"
-            if sub_id_6 != "None"{
-                appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
+        if appsFlyerData["af_sub2"] != nil {
+            let sub_id_12 = "\(appsFlyerData["af_sub2"] ?? "")"
+            appFlyerString = appFlyerString + "&sub_id_12=\(sub_id_12)"
+        }
+        if appsFlyerData["af_sub3"] != nil {
+            let sub_id_13 = "\(appsFlyerData["af_sub3"] ?? "")"
+            appFlyerString = appFlyerString + "&sub_id_13=\(sub_id_13)"
+        }
+        
+        if appsFlyerData["af_status"] != nil {
+            let sub_id_6 = "\(appsFlyerData["af_status"] ?? "")"
+            if sub_id_6 == "Organic"{
+            appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
             }
             
         }
         // ЕСЛИ sub4 есть может не быть sub_id_1, sub_id_2, extra_param_6
         if appsFlyerData["campaign"] != nil {
-            let sub_id_4 = "\(appsFlyerData["campaign"] ?? "")"
-            if sub_id_4 != "None" {
-            appFlyerString = appFlyerString + "&sub_id_4=\(sub_id_4)"
-            if sub_id_4 != ""{
-                let arrayCampaign = sub_id_4.components(separatedBy: "_")
-                let sub_id_1 = arrayCampaign[0]
-                let sub_id_2 = arrayCampaign[1]
-                let extra_param_6 = arrayCampaign[2]
-                appFlyerString = appFlyerString + "&sub_id_1=\(sub_id_1)&sub_id_2=\(sub_id_2)&extra_param_6=\(extra_param_6)"
+            let temp = "\(appsFlyerData["campaign"] ?? "")"
+            if temp != "None" {
+            let array = temp.components(separatedBy: "_")
+                if array.count >= 1 {
+                  appFlyerString = appFlyerString + "&sub_id_1=\(array[0])"
+                }
+                if array.count >= 2 {
+                    appFlyerString = appFlyerString + "&sub_id_2=\(array[1])"
+                }
+                if array.count >= 3 {
+                    appFlyerString = appFlyerString + "&extra_param_6=\(array[2])"
+                }
             }
+        }
+        if appsFlyerData["c"] != nil {
+            let temp = "\(appsFlyerData["c"] ?? "")"
+            if temp != "None" {
+                let array = temp.components(separatedBy: "_")
+                if array.count >= 1 {
+                    appFlyerString = appFlyerString + "&sub_id_1=\(array[0])"
+                }
+                if array.count >= 2 {
+                    appFlyerString = appFlyerString + "&sub_id_2=\(array[1])"
+                }
+                if array.count >= 3 {
+                    appFlyerString = appFlyerString + "&extra_param_6=\(array[2])"
+                }
             }
         }
         
