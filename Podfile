@@ -8,6 +8,7 @@ target 'MetricaTest' do
   # Pods for MetricaTest
 	pod 'FacebookCore'
 	pod 'AppsFlyerFramework'
+	pod 'YandexMobileMetrica', '3.6.0'
 	pod 'Alamofire'
 	pod 'Kingfisher'
 	pod 'RxSwift'

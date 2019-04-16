@@ -11,7 +11,7 @@ import UIKit
 import AppsFlyerLib
 import FacebookCore
 import FBSDKCoreKit
-
+import YandexMobileMetrica
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerTrackerDelegate {
 
@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerTrackerDelegate 
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        let configuration = YMMYandexMetricaConfiguration.init(apiKey: appMetricaApiKey)
+        YMMYandexMetrica.activate(with: configuration!)
         
         AppsFlyerTracker.shared().appsFlyerDevKey = appsFlyerDevKey
         AppsFlyerTracker.shared().appleAppID = appId

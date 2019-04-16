@@ -10,7 +10,8 @@ import UIKit
 import WebKit
 import FacebookCore
 import FBSDKCoreKit.FBSDKAppLinkUtility
-
+import AdSupport
+import YandexMobileMetrica
 
 class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     var facebookData = String ()
@@ -141,7 +142,7 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
             }
             
         }
-        // ЕСЛИ sub4 есть может не быть sub_id_1, sub_id_2, extra_param_6
+       
         if appsFlyerData["campaign"] != nil {
             let temp = "\(appsFlyerData["campaign"] ?? "")"
             if temp != "None" {
@@ -172,15 +173,42 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
                 }
             }
         }
-        
-        let url = URL(string: "https://hovichuvni.mikemilikanich.site/Bj7QZbNj" + "?" + facebookData + appFlyerString)!
-        print ("URL")
-        print (url)
-        DispatchQueue.main.async {[weak self] in
-            guard let self = self else {return}
-            self.webView.load(URLRequest(url: url))
-            self.webView.allowsBackForwardNavigationGestures = true
+        // IDFA
+        let myIDFA: String?
+        if ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
+            myIDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        } else {
+            myIDFA = nil
         }
+        var idfaString = ""
+        if myIDFA != nil {
+            idfaString = "&sub_id_8=\(myIDFA ?? "")"
+        }
+        // BundleID
+        var bundleIdString = ""
+        let bundleIdentifier =  Bundle.main.bundleIdentifier
+        if bundleIdentifier != nil {
+            bundleIdString = "&sub_id_9=\(bundleIdentifier ?? "")"
+        }
+        // AF key
+        let AfKeyString = "&sub_id_14=\(appsFlyerDevKey)"
+        // Metrica
+        var metricaID = ""
+        YMMYandexMetrica.requestAppMetricaDeviceID(withCompletionQueue: DispatchQueue.main,completionBlock: { appMetricaDeviceID, error in
+            metricaID = appMetricaDeviceID ?? ""
+            print ("TESTMETRICA")
+            let metricaString = "&extra_param_5=\(appMetricaApiKey)_\(appKey)_\(metricaID)"
+            let url = URL(string: "https://hovichuvni.mikemilikanich.site/Bj7QZbNj" + "?" + self.facebookData + appFlyerString + idfaString + bundleIdString + AfKeyString + metricaString)!
+            print ("URL")
+            print (url)
+            DispatchQueue.main.async {[weak self] in
+                guard let self = self else {return}
+                self.webView.load(URLRequest(url: url))
+                self.webView.allowsBackForwardNavigationGestures = true
+            }
+        })
+       
+        
         
     }
     /*
