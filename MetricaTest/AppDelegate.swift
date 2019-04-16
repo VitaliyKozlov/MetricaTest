@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import YandexMobileMetrica
+
 import AppsFlyerLib
 import FacebookCore
 import FBSDKCoreKit
@@ -17,41 +17,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerTrackerDelegate 
 
     var window: UIWindow?
 
-
+    func onConversionDataReceived(_ installData: [AnyHashable: Any]) {
+    print ("APPFLAYER")
+    appsFlyerData = installData
+    NotificationCenter.default.post(name: appFlayerDataLoaded, object: nil)
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let configuration = YMMYandexMetricaConfiguration.init(apiKey: appMetricaKey)
-        YMMYandexMetrica.activate(with: configuration!)
+        
         
         AppsFlyerTracker.shared().appsFlyerDevKey = appsFlyerDevKey
         AppsFlyerTracker.shared().appleAppID = appId
        AppsFlyerTracker.shared().delegate = self
-        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+       // let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
         
         /*if userActivity!.activityType == NSUserActivityTypeBrowsingWeb {
             if let url = userActivity!.webpageURL {
                 
             }
         }*/
-        return Deeplinker.handleDeeplink(url: url)
-        
-     
+        //return Deeplinker.handleDeeplink(url: url)
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
     }
 
     
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        print ("TEST!!!!")
-        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
-            print (userActivity.webpageURL)
-            if let url = userActivity.webpageURL {
-                return Deeplinker.handleDeeplink(url: url)
-            }
-        }
+    private func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        
         return false
     }
     
@@ -73,7 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AppsFlyerTrackerDelegate 
         // Track Installs, updates & sessions(app opens) (You must include this API to enable tracking)
         AppsFlyerTracker.shared()?.trackAppLaunch()
         print ("Active")
-         Deeplinker.checkDeepLink()
+         
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

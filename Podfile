@@ -6,10 +6,12 @@ target 'MetricaTest' do
   use_frameworks!
 
   # Pods for MetricaTest
-	pod 'YandexMobileMetrica/Dynamic', '3.6.0'
 	pod 'FacebookCore'
-	pod 'YandexMobileMetricaPush/Dynamic', '0.7.2'
 	pod 'AppsFlyerFramework'
+	pod 'Alamofire'
+	pod 'Kingfisher'
+	pod 'RxSwift'
+    	pod 'RxCocoa'
   target 'MetricaTestTests' do
     inherit! :search_paths
     # Pods for testing

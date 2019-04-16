@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.1)
   - AppsFlyerFramework (4.8.12)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
@@ -11,38 +12,44 @@ PODS:
     - FBSDKCoreKit (~> 4.37)
   - FBSDKCoreKit (4.40.0):
     - Bolts (~> 1.9)
-  - YandexMobileMetrica/Dynamic (3.6.0):
-    - YandexMobileMetrica/Dynamic/Core (= 3.6.0)
-    - YandexMobileMetrica/Dynamic/Crashes (= 3.6.0)
-  - YandexMobileMetrica/Dynamic/Core (3.6.0)
-  - YandexMobileMetrica/Dynamic/Crashes (3.6.0):
-    - YandexMobileMetrica/Dynamic/Core
-  - YandexMobileMetricaPush/Dynamic (0.7.2):
-    - YandexMobileMetrica/Dynamic/Core (~> 3.4)
+  - Kingfisher (5.1.1)
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
+  - Alamofire
   - AppsFlyerFramework
   - FacebookCore
-  - YandexMobileMetrica/Dynamic (= 3.6.0)
-  - YandexMobileMetricaPush/Dynamic (= 0.7.2)
+  - Kingfisher
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - AppsFlyerFramework
     - Bolts
     - FacebookCore
     - FBSDKCoreKit
-    - YandexMobileMetrica
-    - YandexMobileMetricaPush
+    - Kingfisher
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AppsFlyerFramework: 726f063384d8dc763d7b423e48cbc8cbe10989ab
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FacebookCore: 74288d0add931d361b1596beae787ab72c438249
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
-  YandexMobileMetrica: 11eee6732831a44aea2d81e3ae8626b5b0e129c5
-  YandexMobileMetricaPush: 88e192d6484c4c66b1904325b32a915923acd312
+  Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
 
-PODFILE CHECKSUM: ccd4686756e51457771d7bef83507d24ec9a929f
+PODFILE CHECKSUM: cfaff895fcd4da10782376638d7b2e28093e50c1
 
 COCOAPODS: 1.6.1

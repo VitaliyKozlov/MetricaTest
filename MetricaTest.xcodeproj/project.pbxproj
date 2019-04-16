@@ -10,6 +10,8 @@
 		06616DA6534329C3FAFD1187 /* Pods_MetricaTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EB7D008A190EFAB92BB204 /* Pods_MetricaTestTests.framework */; };
 		72D8CBEF97349069B75AA403 /* Pods_MetricaTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9359A8054BFB82FE2307D6C /* Pods_MetricaTestUITests.framework */; };
 		DFD5DAD219A8C8C257662660 /* Pods_MetricaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3E916F4C795D65AC362D78 /* Pods_MetricaTest.framework */; };
+		F94321742257906F00C7A0FB /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94321732257906F00C7A0FB /* DataModel.swift */; };
+		F94321782257A49400C7A0FB /* YestedayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94321772257A49400C7A0FB /* YestedayTableViewCell.swift */; };
 		F957F4272250C4B200FB5520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4262250C4B200FB5520 /* AppDelegate.swift */; };
 		F957F4292250C4B200FB5520 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4282250C4B200FB5520 /* ViewController.swift */; };
 		F957F42C2250C4B200FB5520 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F957F42A2250C4B200FB5520 /* Main.storyboard */; };
@@ -18,7 +20,12 @@
 		F957F43C2250C4B500FB5520 /* MetricaTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F43B2250C4B500FB5520 /* MetricaTestTests.swift */; };
 		F957F4472250C4B500FB5520 /* MetricaTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4462250C4B500FB5520 /* MetricaTestUITests.swift */; };
 		F957F4552250C4CC00FB5520 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4542250C4CC00FB5520 /* Constants.swift */; };
-		F957F4572253371400FB5520 /* DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F957F4562253371400FB5520 /* DeepLinks.swift */; };
+		F97CC4BA225B108400C5A886 /* TomorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97CC4B9225B108400C5A886 /* TomorrowViewController.swift */; };
+		F97CC4BC225B10ED00C5A886 /* YesterdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97CC4BB225B10ED00C5A886 /* YesterdayViewController.swift */; };
+		F97CC4BE225B1DDE00C5A886 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97CC4BD225B1DDE00C5A886 /* TodayTableViewCell.swift */; };
+		F97CC4C0225B26A100C5A886 /* TomorrowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97CC4BF225B26A100C5A886 /* TomorrowTableViewCell.swift */; };
+		F9F5551E2264681E0011056D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F5551D2264681E0011056D /* StartViewController.swift */; };
+		F9F5555A2264AD830011056D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F555592264AD830011056D /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,8 @@
 		B9359A8054BFB82FE2307D6C /* Pods_MetricaTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetricaTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED26ED12BD24A6C01A84D6FA /* Pods-MetricaTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MetricaTestTests/Pods-MetricaTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0373EAF395A554756235B39 /* Pods-MetricaTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetricaTestUITests.release.xcconfig"; path = "Target Support Files/Pods-MetricaTestUITests/Pods-MetricaTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F94321732257906F00C7A0FB /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F94321772257A49400C7A0FB /* YestedayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YestedayTableViewCell.swift; sourceTree = "<group>"; };
 		F957F4232250C4B200FB5520 /* MetricaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetricaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F957F4262250C4B200FB5520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F957F4282250C4B200FB5520 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +71,12 @@
 		F957F4462250C4B500FB5520 /* MetricaTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricaTestUITests.swift; sourceTree = "<group>"; };
 		F957F4482250C4B500FB5520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F957F4542250C4CC00FB5520 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F957F4562253371400FB5520 /* DeepLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinks.swift; sourceTree = "<group>"; };
+		F97CC4B9225B108400C5A886 /* TomorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowViewController.swift; sourceTree = "<group>"; };
+		F97CC4BB225B10ED00C5A886 /* YesterdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesterdayViewController.swift; sourceTree = "<group>"; };
+		F97CC4BD225B1DDE00C5A886 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		F97CC4BF225B26A100C5A886 /* TomorrowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowTableViewCell.swift; sourceTree = "<group>"; };
+		F9F5551D2264681E0011056D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		F9F555592264AD830011056D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,12 +156,14 @@
 			isa = PBXGroup;
 			children = (
 				F957F4262250C4B200FB5520 /* AppDelegate.swift */,
-				F957F4282250C4B200FB5520 /* ViewController.swift */,
+				F982BD4B2264EA8D00BE6EA6 /* Fantik */,
+				F9F5551D2264681E0011056D /* StartViewController.swift */,
 				F957F42A2250C4B200FB5520 /* Main.storyboard */,
+				F9F555592264AD830011056D /* WebViewController.swift */,
 				F957F4542250C4CC00FB5520 /* Constants.swift */,
-				F957F4562253371400FB5520 /* DeepLinks.swift */,
 				F957F42D2250C4B500FB5520 /* Assets.xcassets */,
 				F957F42F2250C4B500FB5520 /* LaunchScreen.storyboard */,
+				F94321732257906F00C7A0FB /* DataModel.swift */,
 				F957F4322250C4B500FB5520 /* Info.plist */,
 			);
 			path = MetricaTest;
@@ -169,6 +185,19 @@
 				F957F4482250C4B500FB5520 /* Info.plist */,
 			);
 			path = MetricaTestUITests;
+			sourceTree = "<group>";
+		};
+		F982BD4B2264EA8D00BE6EA6 /* Fantik */ = {
+			isa = PBXGroup;
+			children = (
+				F94321772257A49400C7A0FB /* YestedayTableViewCell.swift */,
+				F97CC4BD225B1DDE00C5A886 /* TodayTableViewCell.swift */,
+				F97CC4B9225B108400C5A886 /* TomorrowViewController.swift */,
+				F97CC4BF225B26A100C5A886 /* TomorrowTableViewCell.swift */,
+				F97CC4BB225B10ED00C5A886 /* YesterdayViewController.swift */,
+				F957F4282250C4B200FB5520 /* ViewController.swift */,
+			);
+			path = Fantik;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,23 +384,27 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MetricaTest/Pods-MetricaTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetrica.framework",
-				"${PODS_ROOT}/YandexMobileMetrica/dynamic/YandexMobileMetricaCrashes.framework",
-				"${PODS_ROOT}/YandexMobileMetricaPush/dynamic/YandexMobileMetricaPush.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetrica.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetricaCrashes.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YandexMobileMetricaPush.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,9 +440,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94321742257906F00C7A0FB /* DataModel.swift in Sources */,
+				F97CC4BC225B10ED00C5A886 /* YesterdayViewController.swift in Sources */,
+				F97CC4C0225B26A100C5A886 /* TomorrowTableViewCell.swift in Sources */,
+				F94321782257A49400C7A0FB /* YestedayTableViewCell.swift in Sources */,
 				F957F4292250C4B200FB5520 /* ViewController.swift in Sources */,
-				F957F4572253371400FB5520 /* DeepLinks.swift in Sources */,
+				F9F5551E2264681E0011056D /* StartViewController.swift in Sources */,
+				F97CC4BE225B1DDE00C5A886 /* TodayTableViewCell.swift in Sources */,
+				F9F5555A2264AD830011056D /* WebViewController.swift in Sources */,
 				F957F4272250C4B200FB5520 /* AppDelegate.swift in Sources */,
+				F97CC4BA225B108400C5A886 /* TomorrowViewController.swift in Sources */,
 				F957F4552250C4CC00FB5520 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
