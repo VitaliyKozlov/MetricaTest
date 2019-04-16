@@ -74,40 +74,58 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         var appFlyerString = ""
         if appsFlyerData["campaign_id"] != nil {
             let ad_campaign_id = "\(appsFlyerData["campaign_id"] ?? "")"
+            if ad_campaign_id != "None"{
             appFlyerString = appFlyerString + "&ad_campaign_id=\(ad_campaign_id)"
+            }
         }
         if appsFlyerData["af_c_id"] != nil {
             let ad_campaign_id = "\(appsFlyerData["af_c_id"] ?? "")"
+             if ad_campaign_id != "None"{
             appFlyerString = appFlyerString + "&ad_campaign_id=\(ad_campaign_id)"
+            }
         }
         if appsFlyerData["adgroup_id"] != nil {
             let creative_id = "\(appsFlyerData["adgroup_id"] ?? "")"
+             if creative_id != "None"{
             appFlyerString = appFlyerString + "&creative_id=\(creative_id)"
+            }
         }
         if appsFlyerData["af_ad_id"] != nil{
             let creative_id = "\(appsFlyerData["af_ad_id"] ?? "")"
+            if creative_id != "None"{
             appFlyerString = appFlyerString + "&creative_id=\(creative_id)"
+            }
         }
         if appsFlyerData["adgroup_id"] != nil {
             let sub_id_3 = "\(appsFlyerData["adgroup_id"] ?? "")"
+            if sub_id_3 != "None"{
             appFlyerString = appFlyerString + "&sub_id_3=\(sub_id_3)"
+            }
         }
         
         if appsFlyerData["pid"] != nil {
             let sub_id_6 = "\(appsFlyerData["pid"] ?? "")"
+            if sub_id_6 != "None"{
             appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
+            }
         }
         if appsFlyerData["media_source"] != nil {
             let sub_id_6 = "\(appsFlyerData["media_source"] ?? "")"
-            appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
+            if sub_id_6 != "None"{
+                appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
+            }
         }
         if appsFlyerData["organic"] != nil {
             let sub_id_6 = "\(appsFlyerData["organic"] ?? "")"
-            appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
+            if sub_id_6 != "None"{
+                appFlyerString = appFlyerString + "&sub_id_6=\(sub_id_6)"
+            }
+            
         }
         // ЕСЛИ sub4 есть может не быть sub_id_1, sub_id_2, extra_param_6
         if appsFlyerData["campaign"] != nil {
             let sub_id_4 = "\(appsFlyerData["campaign"] ?? "")"
+            if sub_id_4 != "None" {
             appFlyerString = appFlyerString + "&sub_id_4=\(sub_id_4)"
             if sub_id_4 != ""{
                 let arrayCampaign = sub_id_4.components(separatedBy: "_")
@@ -115,6 +133,7 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
                 let sub_id_2 = arrayCampaign[1]
                 let extra_param_6 = arrayCampaign[2]
                 appFlyerString = appFlyerString + "&sub_id_1=\(sub_id_1)&sub_id_2=\(sub_id_2)&extra_param_6=\(extra_param_6)"
+            }
             }
         }
         
