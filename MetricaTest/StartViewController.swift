@@ -48,7 +48,7 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         guard let redirectUrl = webView.url else {return}
         let redirect = "\(redirectUrl)"
         switch redirect {
-        case "https://www.bisefusanadom.com":
+        case "https://www.bisefusanadom.com/":
             performSegue(withIdentifier: "fantikSegue", sender: self)
         default:
             print (redirect)

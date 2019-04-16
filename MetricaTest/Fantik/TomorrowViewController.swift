@@ -56,7 +56,7 @@ class TomorrowViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let date0 = Calendar.current.startOfDay(for: now) // 00:00:00 сегодня
         let dateFormatter = DateFormatter()
         let date = date0 + (60*60*24) + 1
-        dateFormatter.dateFormat = "yyyy-dd-MM"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: date)
         print("ДАТА ЗАВТРАШНЕЯ\(dateString)")
         
