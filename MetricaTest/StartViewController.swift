@@ -16,6 +16,8 @@ import YandexMobileMetrica
 class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     var facebookData = String ()
     let webView = WKWebView()
+    var isFirst = "wv"
+    let timeStart = Date()
     override func loadView() {
         self.view = webView
         webView.navigationDelegate = self
@@ -23,6 +25,7 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(webViewStart), name: appFlayerDataLoaded, object: nil)
         FBSDKAppLinkUtility.fetchDeferredAppLink { [weak self] (url, error) in
             guard let self = self else {return}
@@ -38,6 +41,11 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
                 print ("FACEBOOK DATA")
                 print (self.facebookData)
             }
+        }
+        let isFirstString = UserDefaults.standard.string(forKey: "notFirstLaunchApp")
+        if isFirstString == nil {
+            UserDefaults.standard.set(true, forKey: "notFirstLaunchApp")
+            isFirst = "tech"
         }
     }
     
@@ -65,6 +73,18 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
             link = "https://" + link2[0] + "?subId1=" + appClickId
             print ("Link")
             print (link)
+            if isFirst == "tech" {
+              UserDefaults.standard.set(appClickId, forKey: "appClickIdApp")
+               UserDefaults.standard.set(link, forKey: "link")
+            } else {
+                let array = redirect.components(separatedBy: "app_change_link=")
+                let changeLinkFlag = array[0].prefix(1)
+                if changeLinkFlag == "1" {
+                    UserDefaults.standard.set(link, forKey: "link")
+                     UserDefaults.standard.set(appClickId, forKey: "appClickIdApp")
+                }
+            }
+            
             performSegue(withIdentifier: "realSegue", sender: self)
         }
         
@@ -192,15 +212,29 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         }
         // AF key
         let AfKeyString = "&sub_id_14=\(appsFlyerDevKey)"
+        // appClickId
+        var appClickIdParam = ""
+        if isFirst == "wv" {
+            let extra7 = UserDefaults.standard.string(forKey: "appClickIdApp") ?? ""
+            appClickIdParam = "&extra_param_7=\(extra7)"
+        }
         // Metrica
         var metricaID = ""
-        YMMYandexMetrica.requestAppMetricaDeviceID(withCompletionQueue: DispatchQueue.main,completionBlock: { appMetricaDeviceID, error in
+        YMMYandexMetrica.requestAppMetricaDeviceID(withCompletionQueue: DispatchQueue.main,completionBlock: { [weak self] appMetricaDeviceID, error in
+            guard let self = self else {return}
             metricaID = appMetricaDeviceID ?? ""
             print ("TESTMETRICA")
+            
+            let timeFinish = Date()
+            let executionTime = timeFinish.timeIntervalSince((self.timeStart))
+            print (executionTime)
+            let timeParam = "&sub_id_10=\(self.isFirst ?? "")_1_174_Ankizh_iOS_\(executionTime)"
             let metricaString = "&extra_param_5=\(appMetricaApiKey)_\(appKey)_\(metricaID)"
-            let url = URL(string: "https://hovichuvni.mikemilikanich.site/Bj7QZbNj" + "?" + self.facebookData + appFlyerString + idfaString + bundleIdString + AfKeyString + metricaString)!
+        
+            let url = URL(string: "https://hovichuvni.mikemilikanich.site/Bj7QZbNj" + "?" + self.facebookData + appFlyerString + idfaString + bundleIdString + AfKeyString + metricaString + appClickIdParam + timeParam)!
             print ("URL")
             print (url)
+            
             DispatchQueue.main.async {[weak self] in
                 guard let self = self else {return}
                 self.webView.load(URLRequest(url: url))

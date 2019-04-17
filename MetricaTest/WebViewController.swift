@@ -17,7 +17,8 @@ let webView = WKWebView()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let url = URL(string: link) else {return}
+        let realLink = UserDefaults.standard.string(forKey: "link")
+        guard let url = URL(string: realLink!) else {return}
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         // Do any additional setup after loading the view.
