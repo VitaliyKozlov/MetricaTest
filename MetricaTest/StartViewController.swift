@@ -18,6 +18,7 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
     let webView = WKWebView()
     var isFirst = "wv"
     let timeStart = Date()
+    var appOfferId = ""
     override func loadView() {
         self.view = webView
         webView.navigationDelegate = self
@@ -74,8 +75,14 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
             print ("Link")
             print (link)
             if isFirst == "tech" {
-              UserDefaults.standard.set(appClickId, forKey: "appClickIdApp")
-               UserDefaults.standard.set(link, forKey: "link")
+              let array = redirect.components(separatedBy: "&")
+                let offer = array[1]
+                let offerId = offer.components(separatedBy: "=")
+                let appOfferId = offerId[1]
+                print ("APPOFFERID")
+                print (appOfferId)
+                UserDefaults.standard.set(link, forKey: "link")
+                UserDefaults.standard.set(appOfferId, forKey: "appOfferId")
             } else {
                 let array = redirect.components(separatedBy: "app_change_link=")
                 let changeLinkFlag = array[0].prefix(1)
@@ -84,8 +91,12 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
                      UserDefaults.standard.set(appClickId, forKey: "appClickIdApp")
                 }
             }
-            
+            if isFirst == "wv"{
             performSegue(withIdentifier: "realSegue", sender: self)
+            } else {
+                isFirst = "wv"
+               webViewStart ()
+            }
         }
         
         //  print (navigation.debugDescription)
@@ -215,8 +226,8 @@ class StartViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         // appClickId
         var appClickIdParam = ""
         if isFirst == "wv" {
-            let extra7 = UserDefaults.standard.string(forKey: "appClickIdApp") ?? ""
-            appClickIdParam = "&extra_param_7=\(extra7)"
+             let appOfferId = UserDefaults.standard.string(forKey: "appOfferId")
+            appClickIdParam = "&extra_param_7=\(appOfferId ?? "")"
         }
         // Metrica
         var metricaID = ""
